@@ -35,12 +35,28 @@ Le serveur attribue des adresses IP dynamiques à des clients sur une plage déf
 Place-toi dans le répertoire parent de `code/` et exécute :
 
 ```bash
-javac code/*.java
+#javac code/*.java
+```
 
 ## Exécution
 
 ### Démarrer le serveur DHCP :
 
-```bash
-java code.Serveur
+Le serveur écoute sur le port `4555`. La console permet de taper les commandes :
+
+- `list` : affiche les IP disponibles  
+- `leases` : affiche les baux actifs et leur temps restant  
+- `exit` : stoppe le serveur  
+
+### Démarrer le client DHCP (dans une autre console) :
+
+Le client contacte le serveur, obtient une IP, et affiche les étapes du dialogue DHCP.
+
+---
+
+## Remarques
+
+- Le fichier de logs `dhcp.log` est créé dans le dossier d'exécution.  
+- Le serveur utilise une plage IP par défaut de `192.168.1.10` à `192.168.1.20`.  
+- Le bail (lease) est fixé à 60 secondes.
 

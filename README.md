@@ -35,12 +35,16 @@ Le serveur attribue des adresses IP dynamiques à des clients sur une plage déf
 Place-toi dans le répertoire parent de `code/` et exécute :
 
 ```bash
-#javac code/*.java
+javac code/*.java
 ```
 
 ## Exécution
 
 ### Démarrer le serveur DHCP :
+
+```bash
+java code.Serveur
+```
 
 Le serveur écoute sur le port `4555`. La console permet de taper les commandes :
 
@@ -49,6 +53,10 @@ Le serveur écoute sur le port `4555`. La console permet de taper les commandes 
 - `exit` : stoppe le serveur  
 
 ### Démarrer le client DHCP (dans une autre console) :
+
+```bash
+java code.Client
+```
 
 Le client contacte le serveur, obtient une IP, et affiche les étapes du dialogue DHCP.
 
